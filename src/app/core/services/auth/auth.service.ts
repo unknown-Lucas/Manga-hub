@@ -11,10 +11,9 @@ export class AuthService {
 
   checkToken(token: string) {}
 
-  logOut(): Promise<Boolean> {
+  logOut(): void {
     localStorage.removeItem('token')
     localStorage.removeItem('expiresIn')
-    return this.router.navigate(['login'])
   }
 
   saveToken(token: string, expiresIn: string): void {

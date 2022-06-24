@@ -10,7 +10,7 @@
       <a mat-list-item [routerLink]="['/home']" class="hoverable">Inicio</a>
       <a mat-list-item [routerLink]="['/profile/favorites']" class="hoverable">favorites</a>
       <a mat-list-item [routerLink]="['/profile']" class="hoverable">Profile</a>
-      <a mat-list-item (click)="logOut()" class="hoverable">Log out</a>
+      <a mat-list-item (click)="logOut()" [routerLink]="['/login']" class="hoverable">Log out</a>
       <a mat-list-item [routerLink]="['/register']" class="hoverable"
         >Register</a
       >
