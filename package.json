@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build",
+    "build": "ng run Manga-hub:build:production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
