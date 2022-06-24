@@ -6,7 +6,7 @@ import { PrivateComponent } from './private.component';
 import { ReaderComponent } from './components/reader/reader.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { PublicModule } from '../public/public.module';
-
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { PublicModule } from '../public/public.module';
   imports: [
     CommonModule,
     PublicModule,
-    PrivateRoutingModule
+    PrivateRoutingModule,
+    LazyLoadImageModule
   ]
 })
 export class PrivateModule { }

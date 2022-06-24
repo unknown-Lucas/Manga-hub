@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { PublicRoutingModule } from './public-routing.module'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 //Angular Material
 import { MatSidenavModule } from '@angular/material/sidenav'
@@ -49,6 +50,7 @@ import { BottomSheetComponent } from './components/bottom-sheet/bottom-sheet.com
     MatBottomSheetModule,
     MatIconModule,
     MatSidenavModule,
+    LazyLoadImageModule,
     HttpClientModule,
     ReactiveFormsModule,
     FontAwesomeModule

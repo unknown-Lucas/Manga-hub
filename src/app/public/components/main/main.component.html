@@ -14,7 +14,7 @@
   <div class="container__cards">
     <div class="card" *ngFor="let manga of trueMangaArr | search: filterValue">
       <div class="cover">
-        <img src="{{ manga.Personal.imagen }}" alt="Cover"  loading="lazy"/>
+        <img [defaultImage]="" [lazyLoad]="manga.Personal.imagen" alt="Cover"/>
       </div>
 
       <div class="description" [ngSwitch]="manga.Datos.genero">
