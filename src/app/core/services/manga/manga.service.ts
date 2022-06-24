@@ -12,11 +12,11 @@ export class MangaService {
   constructor(private http: HttpClient, private router: Router) {}
 
   getMangas() {
-    return this.http.get<Manga[]>('http://bitcorank.herokuapp.com/mangas')
+    return this.http.get<Manga[]>('https://bitcorank.herokuapp.com/mangas')
   }
 
   getChapters(id:number) {
-    return this.http.get(`http://bitcorank.herokuapp.com/chapters/${id}`)
+    return this.http.get(`https://bitcorank.herokuapp.com/chapters/${id}`)
   }
 
   read = (chapter: string, apiID: string): void => {
