@@ -2,7 +2,8 @@
   margin-left: auto;
   margin-right: auto;
   display: block;
-  max-width: 800px;
+  width: 600px;
+  height: 1200px;
 }
 
 .spinner {
@@ -51,7 +52,8 @@ a.button4:hover {
   }
 
   .images {
-    max-width: 200px;
+    max-width: 300px;
+    max-height: 600px;
   }
 }
 

@@ -3,7 +3,7 @@
 <div class="loader" *ngIf="!load">
   <div class="overlay">
     <div class="spinner">
-      <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--huFQ3nbp--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/gqmymopg8bignlcfhvcx.gif" />
+      <img src="{{loader}}" />
     </div>
   </div>
 </div>
@@ -14,7 +14,7 @@
   <div class="container__cards">
     <div class="card" *ngFor="let manga of trueMangaArr | search: filterValue">
       <div class="cover">
-        <img [defaultImage]="" [lazyLoad]="manga.Personal.imagen" alt="Cover"/>
+        <img [defaultImage]="loader" [lazyLoad]="manga.Personal.imagen" alt="Cover"/>
       </div>
 
       <div class="description" [ngSwitch]="manga.Datos.genero">

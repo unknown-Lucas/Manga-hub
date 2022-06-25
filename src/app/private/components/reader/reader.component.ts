@@ -13,6 +13,7 @@ import { BottomSheetComponent } from 'src/app/public/components/bottom-sheet/bot
 export class ReaderComponent implements OnInit {
   images: any[] = []
   load: boolean = false
+  loader: string = "https://res.cloudinary.com/practicaldev/image/fetch/s--huFQ3nbp--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/gqmymopg8bignlcfhvcx.gif"
 
   constructor(
     private _route: ActivatedRoute,

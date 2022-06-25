@@ -3,11 +3,12 @@
 <div class="loader" *ngIf="!load">
   <div class="overlay">
     <div class="spinner">
-      <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--huFQ3nbp--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/gqmymopg8bignlcfhvcx.gif" />
+      <img src="{{loader}}" />
     </div>
   </div>
 </div>
 
+<div>
 <div class="aaa" *ngIf="load">
   <a
     (click)="chapterlist()"
@@ -16,7 +17,7 @@
     >chapterlist</a
   >
   <div class="imageblock" *ngFor="let image of images">
-    <img [defaultImage]="" [lazyLoad]="image.image"  class="images"/>
+    <img [defaultImage]="loader" [lazyLoad]="image.image"  class="images"/>
     <br />
   </div>
   <a (click)="chapterlist()" class="button4" style="background-color: #f1bb4e"

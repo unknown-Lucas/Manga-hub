@@ -14,6 +14,8 @@ export class MainComponent implements OnInit {
   trueMangaArr: Manga[] = []
   filterValue: string = ''
   load: boolean = false
+  description = false
+  loader: string = "https://res.cloudinary.com/practicaldev/image/fetch/s--huFQ3nbp--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/gqmymopg8bignlcfhvcx.gif"
 
   constructor(
     private http: HttpClient,
