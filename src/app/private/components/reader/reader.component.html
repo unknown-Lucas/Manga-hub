@@ -17,7 +17,7 @@
     >chapterlist</a
   >
   <div class="imageblock" *ngFor="let image of images">
-    <img [defaultImage]="loader" [lazyLoad]="image.image"  class="images"/>
+    <img [defaultImage]="loader" [lazyLoad]="image.image" [useSrcset]="true" class="images"/>
     <br />
   </div>
   <a (click)="chapterlist()" class="button4" style="background-color: #f1bb4e"
