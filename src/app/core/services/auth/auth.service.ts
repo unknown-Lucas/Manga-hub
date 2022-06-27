@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http'
 import { Injectable } from '@angular/core'
 import { Router } from '@angular/router'
-import { Manga } from 'src/app/public/classes/Mangas'
 
 @Injectable({
   providedIn: 'root'
@@ -21,12 +20,10 @@ export class AuthService {
     localStorage.setItem('expiresIn', expiresIn)
   }
 
-  getUserByToken(token: string | null){
+  getUserByToken(token: string | null) {
     if (token !== null) {
-      return this.http
-        .get(`https://bitcorank.herokuapp.com/tokenUser/${token}`)
+      return this.http.get(`https://bitcorank.herokuapp.com/tokenUser/${token}`)
     }
-    return this.http
-    .get(`https://bitcorank.herokuapp.com/tokenUser/false`)
+    return this.http.get(`https://bitcorank.herokuapp.com/tokenUser/false`)
   }
 }
