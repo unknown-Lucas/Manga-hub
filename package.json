@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "ng build-compress",
+    "build": "npm run build-compress",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build-compress": "ng build && rm -rf ./dist/* && gzipper --verbose --output-file-format [filename].[ext] ./dist/manga-hub ./dist/manga-hub-gzip"
