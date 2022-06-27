@@ -4,10 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
-    "build": "npm run build-compress",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "build-compress": "ng build && gzipper c ./dist --include js,css,html --output-file-format [filename].[ext] ./dist/manga-hub"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -26,7 +25,6 @@
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@schematics/angular": "^14.0.2",
     "express": "^4.18.1",
-    "gzipper": "^7.1.0",
     "ng-lazyload-image": "^9.1.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
