@@ -46,9 +46,7 @@ export class BottomSheetComponent implements OnInit {
       })
       this.user=results[1]
       if (this.user) {
-        console.log(this.user)
         this.user.favs.forEach((mangaID: number) => {
-          console.log(mangaID)
           if (mangaID == this.Manga.id) {
             this.isFavorite = true
           }
@@ -62,14 +60,10 @@ export class BottomSheetComponent implements OnInit {
    favourite = async() => {
     if (!this.isFavorite) {
       this.isFavorite = !this.isFavorite
-      return await this.userService.addFavourite(this.Manga.id, this.user._id).subscribe((res) =>
-        console.log(res)
-      )
+      return await this.userService.addFavourite(this.Manga.id, this.user._id)
     } else {
       this.isFavorite = !this.isFavorite
-      return await this.userService.removeFavourite(this.Manga.id, this.user._id).subscribe(
-        (res) => console.log(res)
-      )
+      return await this.userService.removeFavourite(this.Manga.id, this.user._id)
     }
   }
 
