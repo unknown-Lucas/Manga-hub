@@ -20,7 +20,7 @@ export class ProfileComponent implements OnInit {
           rows: 1,
           image:
             'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/b003f266787363.5b2216b70df77.png',
-          url: '/home',
+          url: '/main',
         },
         {
           title: 'Upload mangas',
