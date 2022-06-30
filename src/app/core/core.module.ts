@@ -28,6 +28,6 @@ import { LazyLoadImageModule } from 'ng-lazyload-image'
     LazyLoadImageModule,
     HttpClientModule,
   ],
-  exports: [TopVarComponent, MatIconModule, LazyLoadImageModule,CommonModule,HttpClientModule]
+  exports: [TopVarComponent, MatIconModule, LazyLoadImageModule,CommonModule,HttpClientModule,MatButtonModule]
 })
 export class CoreModule {}
