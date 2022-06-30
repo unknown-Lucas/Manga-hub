@@ -14,12 +14,12 @@
     <div class="attributes">
       <img src="{{ Manga.Personal.imagen }}" />
       <div class="atributos" [ngSwitch]="Manga.Datos.estado">
-        <p><b>Tipo:</b> {{ Manga.tipo }}</p>
-        <p><b>Autor:</b> {{ Manga.Personal.autor }}</p>
-        <p><b>Genero:</b> {{ Manga.Datos.genero }}</p>
-        <p><b>Fecha de publicación:</b> {{ Manga.Datos.fechaCreacion }}</p>
+        <p><b>Type:</b> {{ Manga.tipo }}</p>
+        <p><b>Author:</b> {{ Manga.Personal.autor }}</p>
+        <p><b>Genre:</b> {{ Manga.Datos.genero }}</p>
+        <p><b>Publication date:</b> {{ Manga.Datos.fechaCreacion }}</p>
         <p>
-          <b>Estado:</b>
+          <b>State:</b>
           <span *ngSwitchCase="'ongoing'" id="status" style="background-color: #2ecc7190; padding: 3px;">{{
             Manga.Datos.estado
           }}</span>
@@ -36,9 +36,9 @@
       </div>
     </div>
   </div>
-    <p class="descripcion"><b>Descripcion:</b><br />{{ Manga.Datos.descripcion }}</p>
+    <p class="descripcion"><b>Description:</b><br />{{ Manga.Datos.descripcion }}</p>
     <div class="chapterContainer">
-    <h1>Capitulos</h1>
+    <h1>Chapters</h1>
     <div *ngFor="let a of chapters">
       <a (click)="read(a.id)">{{ a.chapter }}</a>
     </div>
