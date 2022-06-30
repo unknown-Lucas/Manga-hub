@@ -19,10 +19,17 @@ export class MangaService {
     return this.http.get(`https://bitcorank.herokuapp.com/chapters/${id}`)
   }
 
-  read = (chapter: string, apiID: string): void => {
+  read = (chapter: string, apiID: string) => {
     this.router
       .navigateByUrl('/', { skipLocationChange: true })
       .then(() => this.router.navigateByUrl(`/reader/${apiID}/${chapter}`))
   }
 
+  readChapter = (MangaID: string | null, chapterID: string|null) => {
+    return this.http.get(`https://bitcorank.herokuapp.com/chapters/${MangaID}/${chapterID}`)
+  }
+
+  ActualManga = (MangaID:string|null) => {
+    return this.http.get(`https://bitcorank.herokuapp.com/ActualManga/${MangaID}`)
+  }
 }
