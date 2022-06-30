@@ -15,7 +15,7 @@ export class ProfileComponent implements OnInit {
     map(({ matches }) => {
       return [
         {
-          title: 'Todos los Mangas',
+          title: 'All the mangas',
           cols: 2,
           rows: 1,
           image:
@@ -23,7 +23,7 @@ export class ProfileComponent implements OnInit {
           url: '/home',
         },
         {
-          title: 'Subir mangas',
+          title: 'Upload mangas',
           cols: 1,
           rows: 1,
           image:
@@ -31,7 +31,7 @@ export class ProfileComponent implements OnInit {
           url: '/onDev',
         },
         {
-          title: 'Mis mangas',
+          title: 'My mangas',
           cols: 1,
           rows: 1,
           image:
@@ -47,7 +47,7 @@ export class ProfileComponent implements OnInit {
           url: '/profile/favorites',
         },
         {
-          title: 'log Out',
+          title: 'Log Out',
           cols: 1,
           rows: 1,
           image:
