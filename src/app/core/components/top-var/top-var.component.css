@@ -52,3 +52,7 @@ a, a:hover, a:visited, a:active {
   transform: scaleX(0);
   transform-origin: bottom right;
 }
+
+fa-icon{
+  margin-left: 15px;
+}

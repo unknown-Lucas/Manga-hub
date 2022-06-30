@@ -7,23 +7,16 @@
   >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item [routerLink]="['/home']" class="hoverable">Inicio</a>
-      <a mat-list-item [routerLink]="['/profile/favorites']" class="hoverable">favorites</a>
-      <a mat-list-item [routerLink]="['/profile']" class="hoverable">Profile</a>
-      <a mat-list-item (click)="logOut()" [routerLink]="['/login']" class="hoverable">Log out</a>
-      <a mat-list-item [routerLink]="['/register']" class="hoverable"
-        >Register</a
-      >
+      <a mat-list-item [routerLink]="['/main']" class="hoverable">home <fa-icon [icon]="Inicio"></fa-icon></a>
+      <a mat-list-item [routerLink]="['/profile']" class="hoverable">Profile  <fa-icon [icon]="Perfil"></fa-icon></a>
+      <a mat-list-item [routerLink]="['/profile/favorites']" class="hoverable" >favorites  <fa-icon [icon]="Favoritos"></fa-icon></a>
+      <a mat-list-item [routerLink]="['/register']" class="hoverable">Register  <fa-icon [icon]="Registrar"></fa-icon></a>
+      <a mat-list-item (click)="logOut()" [routerLink]="['/login']" class="hoverable">Log out  <fa-icon [icon]="logout"></fa-icon></a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-      >
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <a href="#search" [routerLink]="['/main']">Manga-hub</a>

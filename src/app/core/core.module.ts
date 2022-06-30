@@ -8,6 +8,8 @@ import { MatIconModule } from '@angular/material/icon'
 import { RouterModule } from '@angular/router'
 import { MatButtonModule } from '@angular/material/button'
 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+
 import { OnDevComponent } from './components/on-dev/on-dev.component'
 import { TopVarComponent } from './components/top-var/top-var.component'
 import { LazyLoadImageModule } from 'ng-lazyload-image'
@@ -18,6 +20,7 @@ import { LazyLoadImageModule } from 'ng-lazyload-image'
     CommonModule,
     MatSidenavModule,
     MatToolbarModule,
+    FontAwesomeModule,
     MatListModule,
     MatButtonModule,
     MatIconModule,

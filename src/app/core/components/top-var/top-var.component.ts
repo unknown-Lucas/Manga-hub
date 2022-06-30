@@ -4,6 +4,8 @@ import { Observable } from 'rxjs'
 import { map, shareReplay } from 'rxjs/operators'
 import { Router } from '@angular/router'
 
+import { faHouse , faStar , faUser , faRightFromBracket, faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
+
 @Component({
   selector: 'app-top-var',
   templateUrl: './top-var.component.html',
@@ -14,6 +16,12 @@ export class TopVarComponent {
     map((result) => result.matches),
     shareReplay()
   )
+
+  Inicio = faHouse;
+  Favoritos = faStar;
+  Perfil = faUser;
+  Registrar = faUserAstronaut
+  logout = faRightFromBracket;
 
   logOut() {
     localStorage.removeItem('token')
