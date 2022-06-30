@@ -7,12 +7,14 @@ import { ReaderComponent } from './components/reader/reader.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { PublicModule } from '../public/public.module';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
+import { FavouritesComponent } from './components/favourites/favourites.component';
 
 @NgModule({
   declarations: [
     PrivateComponent,
     ReaderComponent,
     ProfileComponent,
+    FavouritesComponent,
   ],
   imports: [
     CommonModule,
