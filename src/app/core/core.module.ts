@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
-
+import { HttpClientModule } from '@angular/common/http'
 import { MatSidenavModule } from '@angular/material/sidenav'
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatListModule } from '@angular/material/list'
@@ -22,8 +22,9 @@ import { LazyLoadImageModule } from 'ng-lazyload-image'
     MatButtonModule,
     MatIconModule,
     RouterModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    HttpClientModule,
   ],
-  exports: [TopVarComponent, MatIconModule, LazyLoadImageModule,CommonModule]
+  exports: [TopVarComponent, MatIconModule, LazyLoadImageModule,CommonModule,HttpClientModule]
 })
 export class CoreModule {}
