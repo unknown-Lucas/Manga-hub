@@ -12,7 +12,7 @@
       <a mat-list-item [routerLink]="['/profile/favorites']" class="hoverable" >favorites  <fa-icon [icon]="Favoritos"></fa-icon></a>
       <a mat-list-item [routerLink]="['/register']" class="hoverable">Register  <fa-icon [icon]="Registrar"></fa-icon></a>
       <a mat-list-item (click)="AuthService.logOut()" [routerLink]="['/login']" class="hoverable">Log out  <fa-icon [icon]="logout"></fa-icon></a>
-      <a href="https://github.com/unknown-Lucas/Manga-hub" class="hoverable">See the Repo!!<fa-icon [icon]="github"></fa-icon></a>
+      <a mat-list-item href="https://github.com/unknown-Lucas/Manga-hub" class="hoverable" >See the Repo!!<fa-icon [icon]="github"></fa-icon></a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
