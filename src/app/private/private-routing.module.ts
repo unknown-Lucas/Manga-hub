@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router'
 import { ReaderComponent } from './components/reader/reader.component'
 import { AuthGuard } from '../core/guards/auth.guard'
 import { ProfileComponent } from './components/profile/profile.component'
+import { FavouritesComponent } from './components/favourites/favourites.component'
+import { OnDevComponent } from '../core/components/on-dev/on-dev.component'
 
 const routes: Routes = [
   {
@@ -13,6 +15,11 @@ const routes: Routes = [
   {
     path:'profile',
     component: ProfileComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path:'profile/favorites',
+    component: OnDevComponent,
     canActivate: [AuthGuard]
   }
 ]

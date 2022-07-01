@@ -3,7 +3,6 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout'
 import { Observable } from 'rxjs'
 import { map, shareReplay } from 'rxjs/operators'
 import { Router } from '@angular/router'
-
 import { faHouse , faStar , faUser , faRightFromBracket, faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
