@@ -4,6 +4,7 @@ import { Observable } from 'rxjs'
 import { map, shareReplay } from 'rxjs/operators'
 import { Router } from '@angular/router'
 import { faHouse , faStar , faUser , faRightFromBracket, faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
+import { AuthService } from '../../services/auth/auth.service'
 
 @Component({
   selector: 'app-top-var',
@@ -16,17 +17,15 @@ export class TopVarComponent {
     shareReplay()
   )
 
+  //Icons
   Inicio = faHouse;
   Favoritos = faStar;
   Perfil = faUser;
   Registrar = faUserAstronaut
   logout = faRightFromBracket;
 
-  logOut() {
-    localStorage.removeItem('token')
-    localStorage.removeItem('expiresIn')
-    this.route.navigate(['login'])
-  }
+  //auth Service to component
+  AuthService = this.authService
 
-  constructor(private breakpointObserver: BreakpointObserver, private route: Router) {}
+  constructor(private breakpointObserver: BreakpointObserver, private route: Router, private authService: AuthService) {}
 }

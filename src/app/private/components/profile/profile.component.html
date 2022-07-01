@@ -7,7 +7,7 @@
       [rowspan]="card.rows"
     >
       <mat-card
-        *ngIf="card.title !== 'log Out'"
+        *ngIf="card.title !== 'Log Out'"
         class="dashboard-card"
         style="background-image: url({{ card.image }});transition:0.3s"
         (click)="goRoute(card.url)"
@@ -26,10 +26,10 @@
       </mat-card>
 
       <mat-card
-        *ngIf="card.title == 'log Out'"
+        *ngIf="card.title == 'Log Out'"
         class="dashboard-card"
         style="background-image: url({{ card.image }});transition:0.3s"
-        (click)="logOut()"
+        (click)="AuthService.logOut()"
       >
         <mat-card-header style="display: flex; justify-content: center">
           <mat-card-title

@@ -13,6 +13,7 @@ export class AuthService {
   logOut(): void {
     localStorage.removeItem('token')
     localStorage.removeItem('expiresIn')
+    this.router.navigate(['login'])
   }
 
   saveToken(token: string, expiresIn: string): void {

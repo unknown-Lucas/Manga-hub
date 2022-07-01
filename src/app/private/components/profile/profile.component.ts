@@ -2,6 +2,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { map } from 'rxjs';
+import { AuthService } from 'src/app/core/services/auth/auth.service';
 
 @Component({
   selector: 'app-profile',
@@ -10,7 +11,8 @@ import { map } from 'rxjs';
 })
 export class ProfileComponent implements OnInit {
 
-  private secret = 'token';
+  //Flex cards
+
   cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
     map(({ matches }) => {
       return [
@@ -58,18 +60,17 @@ export class ProfileComponent implements OnInit {
     })
   );
 
+  //Auth Service
+
+  AuthService = this.authService
+
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private router: Router
+    private router: Router,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {}
-
-  logOut() {
-    localStorage.removeItem('token');
-    localStorage.removeItem('expiresIn');
-    this.router.navigate(['login']);
-  }
 
   goRoute(url: string) {
     this.router.navigateByUrl(url);
