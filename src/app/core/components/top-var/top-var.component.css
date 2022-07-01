@@ -54,5 +54,6 @@ a, a:hover, a:visited, a:active {
 }
 
 fa-icon{
-  margin-left: 15px;
+  margin-left: auto;
+  margin-right: 25px;
 }
