@@ -4,6 +4,7 @@ import { Observable } from 'rxjs'
 import { map, shareReplay } from 'rxjs/operators'
 import { Router } from '@angular/router'
 import { faHouse , faStar , faUser , faRightFromBracket, faUserAstronaut } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { AuthService } from '../../services/auth/auth.service'
 
 @Component({
@@ -21,8 +22,9 @@ export class TopVarComponent {
   Inicio = faHouse;
   Favoritos = faStar;
   Perfil = faUser;
-  Registrar = faUserAstronaut
+  Registrar = faUserAstronaut;
   logout = faRightFromBracket;
+  github = faGithub
 
   //auth Service to component
   AuthService = this.authService
